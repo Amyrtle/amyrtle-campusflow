@@ -1,0 +1,13 @@
+{
+  "envId": "REPLACE_WITH_VERIFIED_PG_ENV_ID",
+  "hosting": [
+    {
+      "name": "campusflow-web",
+      "root": "apps/web",
+      "framework": "vite",
+      "buildCommand": "npm run build",
+      "outputDir": "dist",
+      "deployPath": "/"
+    }
+  ]
+}

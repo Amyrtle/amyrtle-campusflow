@@ -1,0 +1,29 @@
+{
+  "name": "@campusflow/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "node build.mjs",
+    "db:migrate": "tsx src/migrate.ts"
+  },
+  "dependencies": {
+    "@campusflow/shared": "0.1.0",
+    "@electric-sql/pglite": "^0.3.14",
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/static": "^10.1.7",
+    "fastify": "^5.6.1",
+    "pg": "^8.16.3",
+    "dotenv": "^17.2.3",
+    "jose": "^6.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.6",
+    "esbuild": "^0.25.11",
+    "tsx": "^4.20.6"
+  }
+}

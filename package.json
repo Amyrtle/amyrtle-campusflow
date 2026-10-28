@@ -1,0 +1,37 @@
+{
+  "name": "amyrtle-campusflow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/web",
+    "services/api",
+    "packages/shared"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w @campusflow/api\" \"npm run dev -w @campusflow/web\"",
+    "build": "npm run build -w @campusflow/web && npm run build -w @campusflow/api",
+    "start": "npm run start -w @campusflow/api",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "format": "prettier --write apps services packages tests *.ts *.js *.json",
+    "db:migrate": "npm run db:migrate -w @campusflow/api"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.10.0",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.0",
+    "globals": "^16.5.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vitest": "^5.0.5"
+  }
+}

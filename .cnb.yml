@@ -1,0 +1,45 @@
+main:
+  push:
+    - name: CampusFlow verification
+      docker:
+        image: node:24-bookworm
+      env:
+        CI: "true"
+        MOCK_AI_MODE: "true"
+      stages:
+        - name: Install locked dependencies
+          script: npm ci
+        - name: Typecheck
+          script: npm run typecheck
+        - name: Lint
+          script: npm run lint
+        - name: Business tests
+          script: npm test
+        - name: Production build
+          script: npm run build
+        - name: Install browser
+          script: npx playwright install --with-deps chromium
+        - name: Browser tests
+          script: npm run test:e2e
+  pull_request:
+    - name: CampusFlow pull request verification
+      docker:
+        image: node:24-bookworm
+      env:
+        CI: "true"
+        MOCK_AI_MODE: "true"
+      stages:
+        - name: Install locked dependencies
+          script: npm ci
+        - name: Typecheck
+          script: npm run typecheck
+        - name: Lint
+          script: npm run lint
+        - name: Business tests
+          script: npm test
+        - name: Production build
+          script: npm run build
+        - name: Install browser
+          script: npx playwright install --with-deps chromium
+        - name: Browser tests
+          script: npm run test:e2e

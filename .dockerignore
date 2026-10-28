@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+**/dist
+.git
+.local
+.cloudbase
+.env
+.env.*
+!.env.example
+.data
+**/.data
+source-documents
+test-results
+playwright-report
+coverage
+*.log
