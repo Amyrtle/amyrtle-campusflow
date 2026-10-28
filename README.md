@@ -4,6 +4,8 @@
 
 CampusFlow 将活动策划、公开报名、电子凭证、现场签到、统计和复盘连接起来。项目采用 React、TypeScript、Fastify 和 PostgreSQL，面向校园媒体、社团和科创活动组织者。
 
+源码交付入口：[Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)，当前为私有仓库，需授权访问。[GitHub Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml) 执行检查与测试，线上服务由腾讯云提供。同步方式与访问说明见 [GitHub 交付说明](docs/deployment/github.md)。
+
 ## 运行状态
 
 前端与后端已部署至腾讯云体验环境：[打开 CampusFlow 测试站点](https://campusflow-secure-dragon-d6g1dce1lb03f43cf.webapps.tcloudbase.com/)。首次访问会显示腾讯云测试域名提醒，点击“确定访问”后进入。2026-10-28 已验证 HTTP 函数健康、真实共享 PostgreSQL 连接、CORS、正式 CloudBase SDK 密码会话，以及活动、报名、签到、统计、CSV、问卷和模板复盘的 10 阶段线上业务闭环。用户已确认收到真实邮箱验证码并成功登录；后续 OTP 与摄像头修复已发布为 `campusflow-002`（`SUCCESS`）并通过自动化检查。用户已完成 iPhone Safari 核心扫码实测：首次成功、重复扫码仍为 1 / 2，以及识别后、主动停止和后台切换后的预览关闭；云端计数复查一致，专用测试活动已精确清理。拒权、手动替代和硬件指示灯等扩展项未单独真机验证，见 [邮箱与真机验收](docs/testing-email-camera.md)。

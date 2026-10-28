@@ -22,7 +22,7 @@
 | CloudRun | 初次查询未初始化；当前优先 HTTP 云函数，不为此自动开通 CloudRun |
 | 真实 AI | 未验证，保留 `MOCK_AI_MODE=true` 明确模板标识 |
 | Docker | 本机未发现命令，镜像未构建运行；函数 ZIP 和源码包已做独立安装/启动检查 |
-| GitHub/CNB | 本地 CI 与交付文档已准备；尚未公开推送仓库或验证远程 CI |
+| GitHub/CNB | 已创建 [GitHub 私有仓库](https://github.com/Amyrtle/amyrtle-campusflow)，以 main 分支交付源码；检查结果见 [Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml)。CNB 尚未发布 |
 | 费用范围 | 使用已授权环境及体验额度；未升级独享 PG、未开通收费 AI。资源使用可能消耗现有额度，不承诺长期免费 |
 
 ## 已验证访问入口

@@ -20,9 +20,9 @@ Linux CI 使用 `--with-deps` 安装浏览器系统依赖。Windows 开发机可
 
 ## 推送和验证
 
-创建远程仓库前，确认仓库归属、名称、可见性与写入权限。GitHub 身份连接成功不代表 CNB 已授权。将锁文件、源代码和 CI 配置提交后，确认 CNB 的默认分支确实为 `main`，再查看实际流水线结果。
+GitHub 交付仓库为 [Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)，当前为私有仓库，使用 `main` 分支。仓库所有者拥有管理权限，其他人员需获得访问授权。GitHub 身份连接成功不代表 CNB 已授权。
 
-当前没有可提供的 GitHub/CNB 仓库地址或 CI 运行链接。配置文件存在不代表平台已经执行通过；完成推送后，应保存真实运行地址、commit SHA 和失败日志。
+GitHub 的运行入口为 [CI 工作流](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml)，每次推送和 PR 触发检查。实际提交 SHA、运行日志与结论以该页面为准。CNB 仓库尚未创建或推送，远程 CI 未执行；后续接入时应确认其默认分支为 `main`，再核验真实运行结果。
 
 ## 部署扩展
 
