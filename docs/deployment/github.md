@@ -1,6 +1,6 @@
 # GitHub 代码交付
 
-仓库：[Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)。仓库归属为 Amyrtle，采用私有可见性，默认交付分支为 `main`。访问者需使用已获授权的 GitHub 账号；给 TDP 工作人员分享仓库时，也需要为其配置相应访问权限。
+仓库：[Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)。仓库归属为 Amyrtle，采用公开可见性与 MIT License，默认交付分支为 `main`。TDP 工作人员及其他访问者可以直接浏览和克隆源码；写入权限由维护者管理。用户于 2026-10-28 明确授权开源。
 
 线上网站继续运行在 [腾讯云 CloudBase](https://campusflow-secure-dragon-d6g1dce1lb03f43cf.webapps.tcloudbase.com/)。GitHub 保存项目源码、迁移、文档、合成测试截图及持续集成配置。
 

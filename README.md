@@ -4,7 +4,7 @@
 
 CampusFlow 将活动策划、公开报名、电子凭证、现场签到、统计和复盘连接起来。项目采用 React、TypeScript、Fastify 和 PostgreSQL，面向校园媒体、社团和科创活动组织者。
 
-源码交付入口：[Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)，当前为私有仓库，需授权访问。[GitHub Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml) 执行检查与测试，线上服务由腾讯云提供。同步方式与访问说明见 [GitHub 交付说明](docs/deployment/github.md)。
+开源仓库：[Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)，采用 MIT License，可公开浏览和克隆。[GitHub Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml) 执行检查与测试，线上服务由腾讯云提供。同步方式与访问说明见 [GitHub 交付说明](docs/deployment/github.md)。
 
 ## 运行状态
 

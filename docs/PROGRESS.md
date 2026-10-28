@@ -20,7 +20,7 @@
 | 5 分析复盘 | 本地及线上统计、CSV、问卷汇总、模板复盘生成/编辑/刷新持久化通过；真实模型未验证 |
 | 6 工程质量 | 2026-10-28 lint、类型检查、完整构建、5 文件 62 项集成测试与 10 项本地浏览器测试通过（24.8 秒；原有 3 + OTP 4 + 扫码 3）；另有 7 项真实云数据库验收通过记录 |
 | 7 腾讯云部署 | 前端和 HTTP API 已部署，服务端凭证经确认后写入；真实云业务闭环 10/10 通过、页面异常 0。前端修复版本 campusflow-002 为 SUCCESS，index-DlCC1vHh.js 已 HTTP 核验；用户已确认邮箱收信登录及 iPhone 核心扫码、重复防重和识别后/主动停止/后台预览关闭，测试活动已清理，扩展项单独保留 |
-| 8 代码交付与 TDP | README、架构、CI、技术文章、截图和介绍材料已准备；已创建 [GitHub 私有仓库](https://github.com/Amyrtle/amyrtle-campusflow)，以 main 分支交付源码；远程版本与检查结果见 [Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml)。CNB 尚未发布 |
+| 8 开源与 TDP | README、架构、CI、技术文章、截图和介绍材料已准备；[GitHub 开源仓库](https://github.com/Amyrtle/amyrtle-campusflow) 使用 MIT License，以 main 分支交付源码；远程版本与检查结果见 [Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml)。CNB 尚未发布 |
 
 ## 已验证的云端数据库结果
 
@@ -44,7 +44,7 @@
 2. 优化深层页面的 404 状态；当前首页正常，登录子页面能渲染和刷新，网关 CORS 已确认无重复来源头。
 3. iPhone Safari 核心扫码及识别后、主动停止、后台切换后的预览关闭已用户实测通过。扩展项仍未单独真机验证：具体机型/iOS、后置镜头、权限拒绝后的手动签到、离开签到路由、硬件指示灯及弱网。Android Chrome 也尚未真机验收；浏览器手机视口测试不代替硬件验证。
 4. 保持 AI 模板标识；具备已授权的模型访问条件后再验证真实策划与复盘。Word 允许明确的模板降级，未调用模型不得标为 live。
-5. GitHub 交付入口为 [Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)，当前为私有仓库；后续版本与 CI 结果以远程 main 和 [Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml) 为准。CNB 远程发布尚未执行。
+5. GitHub 开源入口为 [Amyrtle/amyrtle-campusflow](https://github.com/Amyrtle/amyrtle-campusflow)，采用 MIT License，可公开浏览；后续版本与 CI 结果以远程 main 和 [Actions](https://github.com/Amyrtle/amyrtle-campusflow/actions/workflows/ci.yml) 为准。CNB 远程发布尚未执行。
 
 2026-10-28 17:38:55–17:40:33 的第二轮云端业务验收 10/10 通过，模板复盘生成、保存及刷新读取均为 200，页面 JavaScript 异常为 0。本轮合成组织、活动和关联记录精确清理后复查为 0；其后合成 CloudBase 账号及 profile 也已精确删除，旧会话访问 userinfo 返回 401，本地三份 QA 私密身份/会话/浏览器存储文件已删除。未触碰用户数据。首轮复盘断言失败的证据不足以认定根因；将云端 UI 等待上限调为 30 秒后完整复验通过，没有修改生产复盘实现。详见 [测试报告](testing.md)。
 
@@ -58,4 +58,4 @@
 - 封面仅支持 URL，云存储上传界面尚未实现；自动保留期限清理、通知邮件、复盘 PDF、候补队列未实现，见 [路线图](ROADMAP.md)。
 - 问卷复盘使用统计与反馈份数，模型不接收参与者名单或原始文本反馈。
 - 本地未提供 Docker，镜像未构建运行；HTTP 函数部署不依赖本地 Docker，现已另外通过真实云端启动与数据库健康检查。
-- 已在授权目标环境执行迁移、配置与合成数据写入，不能再声称“未执行任何云端写入”。未升级付费数据库、未开通收费模型；GitHub 源码仓库采用私有可见性。
+- 已在授权目标环境执行迁移、配置与合成数据写入，不能再声称“未执行任何云端写入”。未升级付费数据库、未开通收费模型；GitHub 源码仓库已按用户 2026-10-28 的明确要求公开，采用 MIT License。
